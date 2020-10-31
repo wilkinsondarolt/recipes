@@ -1,0 +1,139 @@
+{
+    "sys": {
+        "type": "Array"
+    },
+    "total": 1,
+    "skip": 0,
+    "limit": 100,
+    "items": [
+        {
+            "sys": {
+                "space": {
+                    "sys": {
+                        "type": "Link",
+                        "linkType": "Space",
+                        "id": "kk2bw5ojx476"
+                    }
+                },
+                "id": "2E8bc3VcJmA8OgmQsageas",
+                "type": "Entry",
+                "createdAt": "2018-05-07T13:30:34.066Z",
+                "updatedAt": "2018-05-07T13:37:01.760Z",
+                "environment": {
+                    "sys": {
+                        "id": "master",
+                        "type": "Link",
+                        "linkType": "Environment"
+                    }
+                },
+                "revision": 3,
+                "contentType": {
+                    "sys": {
+                        "type": "Link",
+                        "linkType": "ContentType",
+                        "id": "recipe"
+                    }
+                },
+                "locale": "en-US"
+            },
+            "fields": {
+                "title": "Grilled Steak & Vegetables with Cilantro-Jalapeño Dressing",
+                "photo": {
+                    "sys": {
+                        "type": "Link",
+                        "linkType": "Asset",
+                        "id": "3TJp6aDAcMw6yMiE82Oy0K"
+                    }
+                },
+                "calories": 345,
+                "description": "Warmer weather means the ushering in of grill season and this recipe completely celebrates the grill (or grill pan)! Squash and green beans are nicely charred then take a bath in a zesty cilantro-jalapeño dressing. After the steaks are perfectly seared, the same dressing does double duty as a tasty finishing sauce. A fresh radish salad tops it all off for crunch and a burst of color. Cook, relax, and enjoy!",
+                "chef": {
+                    "sys": {
+                        "type": "Link",
+                        "linkType": "Entry",
+                        "id": "1Z8SwWMmS8E84Iogk4E6ik"
+                    }
+                }
+            }
+        }
+    ],
+    "includes": {
+        "Entry": [
+            {
+                "sys": {
+                    "space": {
+                        "sys": {
+                            "type": "Link",
+                            "linkType": "Space",
+                            "id": "kk2bw5ojx476"
+                        }
+                    },
+                    "id": "1Z8SwWMmS8E84Iogk4E6ik",
+                    "type": "Entry",
+                    "createdAt": "2018-05-07T13:28:25.324Z",
+                    "updatedAt": "2018-05-07T14:17:27.403Z",
+                    "environment": {
+                        "sys": {
+                            "id": "master",
+                            "type": "Link",
+                            "linkType": "Environment"
+                        }
+                    },
+                    "revision": 2,
+                    "contentType": {
+                        "sys": {
+                            "type": "Link",
+                            "linkType": "ContentType",
+                            "id": "chef"
+                        }
+                    },
+                    "locale": "en-US"
+                },
+                "fields": {
+                    "name": "Mark Zucchiniberg "
+                }
+            }
+        ],
+        "Asset": [
+            {
+                "sys": {
+                    "space": {
+                        "sys": {
+                            "type": "Link",
+                            "linkType": "Space",
+                            "id": "kk2bw5ojx476"
+                        }
+                    },
+                    "id": "3TJp6aDAcMw6yMiE82Oy0K",
+                    "type": "Asset",
+                    "createdAt": "2018-05-07T13:30:06.967Z",
+                    "updatedAt": "2018-05-07T13:30:06.967Z",
+                    "environment": {
+                        "sys": {
+                            "id": "master",
+                            "type": "Link",
+                            "linkType": "Environment"
+                        }
+                    },
+                    "revision": 1,
+                    "locale": "en-US"
+                },
+                "fields": {
+                    "title": "SKU1503 Hero 102 1 -6add52eb4eec83f785974ddeac3316b7",
+                    "file": {
+                        "url": "//images.ctfassets.net/kk2bw5ojx476/3TJp6aDAcMw6yMiE82Oy0K/2a4cde3c1c7e374166dcce1e900cb3c1/SKU1503_Hero_102__1_-6add52eb4eec83f785974ddeac3316b7.jpg",
+                        "details": {
+                            "size": 216391,
+                            "image": {
+                                "width": 1020,
+                                "height": 680
+                            }
+                        },
+                        "fileName": "SKU1503_Hero_102__1_-6add52eb4eec83f785974ddeac3316b7.jpg",
+                        "contentType": "image/jpeg"
+                    }
+                }
+            }
+        ]
+    }
+}
