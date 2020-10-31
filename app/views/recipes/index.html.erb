@@ -1,0 +1,13 @@
+<div class="container">
+  <h1 class="title has-text-centered">Recipes</h1>
+
+  <% @recipes.each_slice(4) do |recipes| %>
+    <div class="columns is-fullheight">
+      <% recipes.each do |recipe| %>
+        <div class="column is-3">
+          <%= render('recipe_preview', recipe: recipe) %>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+</div>

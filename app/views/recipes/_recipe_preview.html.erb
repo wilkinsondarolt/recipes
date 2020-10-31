@@ -1,0 +1,15 @@
+<div class="card">
+  <div class="card-image">
+    <figure class="image is-4by3">
+      <%= image_tag(recipe.photo.url, alt: recipe.title) %>
+    </figure>
+  </div>
+
+  <div class="card-content has-text-centered">
+    <div class="subtitle"><%= recipe.title %></div>
+  </div>
+
+  <footer class="card-footer">
+    <a href="#" class="card-footer-item">View full recipe</a>
+  </footer>
+</div>
