@@ -1,0 +1,20 @@
+<div class="container">
+  <h1 id="recipe-title" class="title is-1 has-text-centered"><%= @recipe.title %></h1>
+
+  <figure id="recipe-picture" class="image is-16by9">
+    <%= image_tag(@recipe.photo.url, alt: @recipe.title) %>
+  </figure>
+
+  <div id= "tags" class="mt-2">
+    <% recipe_tags(@recipe).each do |tag_name| %>
+      <span class="tag is-info"><%= tag_name %></span>
+    <% end %>
+  </div>
+
+  <div id="recipe-description" class="content mt-4">
+    <%= @recipe.description %>
+  </div>
+
+  <p class="title is-5">Chef</p>
+  <p class="subtitle is-6"><%= chef_name(@recipe) %></p>
+</div>
