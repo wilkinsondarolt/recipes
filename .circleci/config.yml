@@ -1,0 +1,47 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/ruby:2.6.5-node-browsers
+        environment:
+            RAILS_ENV: test
+
+    working_directory: ~/recipes
+
+    steps:
+      - checkout
+
+      - run: cp .env.sample .env
+
+      - restore_cache:
+          keys:
+            - recipes-{{ checksum "Gemfile.lock" }}
+
+      - run:
+          name: install dependencies
+          command: |
+            bundle install --without development \
+                           --deployment \
+                           --jobs=3 \
+                           --retry=3
+      - save_cache:
+          key: recipes-{{ checksum "Gemfile.lock" }}
+          paths:
+            - ./vendor/bundle
+
+      - run:
+          name: install javascript dependencies
+          command: yarn install
+
+      - run:
+          name: compile assets
+          command: NODE_ENV=test bundle exec rails webpacker:compile
+
+      - run:
+          name: run tests
+          command: |
+            bundle exec rspec \
+              --format progress \
+              --profile 10 \
+              --format progress \
+              $TEST_FILES
