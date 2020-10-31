@@ -4,6 +4,10 @@ class Recipe
       client.entries(content_type: 'recipe')
     end
 
+    def find(id)
+      client.entry(id)
+    end
+
     private
 
     def client
