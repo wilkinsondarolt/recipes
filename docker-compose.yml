@@ -1,0 +1,25 @@
+version: '3.7'
+
+services:
+  web:
+    build:
+      context: .
+    env_file:
+      - .env
+    command: bash -c 'bundle exec rails s -b 0.0.0.0'
+    ports:
+      - '3000:3000'
+    stdin_open: true
+    tty: true
+    volumes:
+      - .:/app
+
+  webpack:
+    image: recipes_web:latest
+    command: bash -c './bin/webpack-dev-server'
+    ports:
+      - '3035:3035'
+    env_file:
+      - .env
+    volumes:
+      - .:/app

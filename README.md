@@ -36,6 +36,47 @@ This project can be improved further by
 - Use the CDN version of Bulma;
 
 # Setting up the project
+
+## Using Docker
+
+**IMPORTANT** Make sure you have [Docker](https://docs.docker.com/engine/install/ubuntu/) and [Docker Compose](https://docs.docker.com/compose/install/) first.
+
+
+Copy the `.env.sample` into `.env`
+
+```shell
+cp .env.sample .env
+```
+
+And then build the project image
+
+```shell
+docker-compose build
+```
+
+### Running the application
+
+Run this command in your terminal
+
+```shell
+docker-compose up
+```
+
+After the boot the app will can be accessed in http://localhost:3000
+
+
+### Running the tests
+
+Run this command in your terminal
+
+```shell
+docker-compose run --rm web bundle exec rspec
+```
+
+## Local setup
+
+**IMPORTANT** Make sure you have `ruby 2.6.5` installed.
+
 Start by running the application's setup
 
 ```shell
@@ -47,7 +88,7 @@ This will
 - Install the Ruby dependencies;
 - Install the Javascript dependencies;
 
-# Running the application
+### Running the application
 
 Run this command in your terminal
 
@@ -58,7 +99,7 @@ bin\rails server
 After the boot the app will can be accessed in http://localhost:3000
 
 
-# Running the tests
+### Running the tests
 
 Run this command in your terminal
 
