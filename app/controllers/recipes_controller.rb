@@ -5,5 +5,7 @@ class RecipesController < ApplicationController
 
   def show
     @recipe = Recipe.find(params[:id])
+
+    raise ActionController::RoutingError, 'Not Found' if @recipe.blank?
   end
 end

@@ -5,16 +5,20 @@
     <%= image_tag(@recipe.photo.url, alt: @recipe.title) %>
   </figure>
 
-  <div id= "tags" class="mt-2">
-    <% recipe_tags(@recipe).each do |tag_name| %>
-      <span class="tag is-info"><%= tag_name %></span>
-    <% end %>
-  </div>
+  <% tags = recipe_tags(@recipe) %>
+
+  <% if tags.any? %>
+    <div id="recipe-tags" class="mt-2">
+      <% tags.each do |tag_name| %>
+        <span class="tag is-info"><%= tag_name %></span>
+      <% end %>
+    </div>
+  <% end %>
 
   <div id="recipe-description" class="content mt-4">
     <%= @recipe.description %>
   </div>
 
   <p class="title is-5">Chef</p>
-  <p class="subtitle is-6"><%= chef_name(@recipe) %></p>
+  <p id="recipe-chef" class="subtitle is-6"><%= chef_name(@recipe) %></p>
 </div>
